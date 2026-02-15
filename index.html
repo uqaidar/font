@@ -1205,7 +1205,22 @@ const fonts = [
     { name: "uniqaidar_xal_01", file: "uniqaidar_xal_01", path: "fonts/xal/uniqaidar_xal_01.ttf", zip: "fonts/xal/uniqaidar_xal_01.zip", category: "xal" },
     { name: "uniqaidar_xal_02", file: "uniqaidar_xal_02", path: "fonts/xal/uniqaidar_xal_02.ttf", zip: "fonts/xal/uniqaidar_xal_02.zip", category: "xal" },
 ];
+// ئەم کۆدە بە شێوەیەکی ئۆتۆماتیکی هەموو فۆنتەکان بە CSS دەناسێنێت
+const style = document.createElement('style');
+let cssRules = '';
 
+fonts.forEach(font => {
+    cssRules += `
+        @font-face {
+            font-family: '${font.name}';
+            src: url('${font.path}') format('truetype');
+        }
+    `;
+});
+
+style.appendChild(document.createTextNode(cssRules));
+document.head.appendChild(style);
+    
    const grid = document.getElementById('font-grid');
     const input = document.getElementById('test-input');
 
@@ -1373,3 +1388,4 @@ input.addEventListener('input', (e) => {
 </footer>
 </body>
 </html>
+
