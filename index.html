@@ -55,6 +55,22 @@
             gap: 10px;
         }
 
+        .header-logo {
+    position: absolute;
+    top: 65%;
+    right: -50px; /* لێرە کردمان بە 0 بۆ ئەوەی تەواو بچێتە لای ڕاست */
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.header-logo img {
+    height: 200px; /* قەبارەکەمان لە 160وە کردە 200 (گەورەتر) */
+    width: 320px;  /* قەبارەکەمان لە 260وە کردە 320 (گەورەتر) */
+    display: block;
+    object-fit: contain;
+    /* ئەگەر ویستت لۆگۆکە کەمێک مەودای هەبێت لە لێواری شاشەکە، right بکە بە 5px یان 10px */
+}
+
         .social-icon {
             width: 35px;
             height: 35px;
@@ -736,14 +752,16 @@ footer strong {
         </a>
     </div>
 
+    <div class="header-logo">
+        <img src="https://i.ibb.co/spKL7BT3/uniqai.png" alt="UniQaidar logo">
+    </div>
+
     <h1 id="main-title">فۆنته‌كانی یونی قه‌یدار</h1>
     <div class="search-container">
         <input type="text" id="test-input" placeholder="لێرە بنووسە بۆ تاقیکردنەوەی فۆنتەکان...">
     </div>
 </div> 
 <div class="filter-container">
-    <div class="filter-label">جۆرەکانی فۆنت ←</div>
-    
     <div class="marquee-wrapper">
         <div class="marquee-content">
             <button class="filter-btn" onclick="filterFonts('all', this)">هەمووی</button>
@@ -1205,22 +1223,9 @@ const fonts = [
     { name: "uniqaidar_xal_01", file: "uniqaidar_xal_01", path: "fonts/xal/uniqaidar_xal_01.ttf", zip: "fonts/xal/uniqaidar_xal_01.zip", category: "xal" },
     { name: "uniqaidar_xal_02", file: "uniqaidar_xal_02", path: "fonts/xal/uniqaidar_xal_02.ttf", zip: "fonts/xal/uniqaidar_xal_02.zip", category: "xal" },
 ];
-// ئەم کۆدە بە شێوەیەکی ئۆتۆماتیکی هەموو فۆنتەکان بە CSS دەناسێنێت
-const style = document.createElement('style');
-let cssRules = '';
 
-fonts.forEach(font => {
-    cssRules += `
-        @font-face {
-            font-family: '${font.name}';
-            src: url('${font.path}') format('truetype');
-        }
-    `;
-});
 
-style.appendChild(document.createTextNode(cssRules));
-document.head.appendChild(style);
-    
+
    const grid = document.getElementById('font-grid');
     const input = document.getElementById('test-input');
 
@@ -1374,7 +1379,7 @@ input.addEventListener('input', (e) => {
         category = onclickAttr.split("'")[1];
     }
 
-    const filtered = (category === 'all') ? fontList : fontList.filter(f => f.category === category);
+    const filtered = (category === 'all') ? fonts : fonts.filter(f => f.category === category);
     
     // ڕاستەوخۆ دووبارە فۆنتەکان پیشان دەداتەوە بە نووسینە نوێیەکە
     renderFonts(text, filtered);
@@ -1388,4 +1393,3 @@ input.addEventListener('input', (e) => {
 </footer>
 </body>
 </html>
-
