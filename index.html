@@ -187,9 +187,9 @@
 }
 
 .filter-btn.active, .filter-btn:hover {
-    background: #00cec9; /* ڕەنگە گەشەکە */
+    background: #3498db; /* ڕەنگە گەشەکە */
     color: white;
-    border-color: #00cec9;
+    border-color: #3498db;
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(0, 206, 201, 0.3);
 }
@@ -221,7 +221,7 @@
         }
 
         .download-btn {
-            background: #5dade2;
+            background: #3498db;
             color: white;
             text-decoration: none;
             text-align: center;
@@ -681,27 +681,28 @@ footer strong {
     display: flex;
 }
 
-
-/* ڕێکخستنی فلتەرەکە بۆ ئەوەی تایتڵەکە جێگیر بێت */
+/* ڕێکخستنی فلتەرەکە - ئەمە بە تەواوی جێگیر و لە ناوەڕاست دەبێت */
 .filter-container {
-    display: flex;
-    align-items: center;
+    /* ١. ئەم دوو دێڕە گرنگترینن بۆ چەق (Center) */
+    display: flex; 
+    margin: 0 auto !important; 
+    /* ٢. ئەمانەش بۆ شێوەکەی */
     background: #1a1a1a;
-    padding: 10px;
+    padding: 15px 30px;
     position: sticky;
     top: 0;
     z-index: 1000;
+    
+    /* ٣. دڵنیابوون لەوەی پاناییەکەی زیادە نییە */
+    max-width: fit-content; 
+    min-width: 200px;
+    border-radius: 0 0 15px 15px; /* کەمێک مۆدێرنتر */
 }
-/* ... کۆدەکانی پێشوو ... */
 
-@keyframes scroll-left {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-}
-
-/* لێرە پەیستی بکە */
+/* ستایلی دوگمەکان وەک خۆی، تەنها بۆ ناوەڕاستبوون ڕێکخراوە */
 .filter-btn {
-    padding: 8px 18px;
+    padding: 9px 18px;
+    margin: 3px 0px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     background: rgba(255, 255, 255, 0.1);
     color: white;
@@ -712,14 +713,18 @@ footer strong {
     transition: all 0.3s ease;
     flex-shrink: 0; 
     white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .filter-btn.active, .filter-btn:hover {
-    background: #00cec9; 
+    background: #0984e3; 
     color: white;
-    border-color: #00cec9;
+    border-color: #0984e3;
     transform: translateY(-2px);
 }
+
 
 /* شێوازی گشتی پەنجەرە شاردراوەکە */
 /* پاشبنەمای گشتی کە کەمێک لێڵ بێت */
@@ -1387,35 +1392,7 @@ if (previewInput) previewInput.addEventListener('input', updateAll);
     renderFonts("");
 // ١. ناوی ئەو فۆنتانەی کە لە CSS ناساندووتن لێرە بنووسە
 const myFonts = [
-    'UniQAIDAR_Xal 01',
-    'UniQAIDAR_Xal 02',
-    'UniQAIDAR_AKAlwand',
-    'UniQAIDAR_BiLaL 000',
-    'UniQAIDAR_BiLaL 001',
-    'UniQAIDAR_BiLaL 009',
-    'UniQAIDAR_BiLaL 019',
-    'UniQAIDAR_BiLaL 022 PY',
-    'UniQAIDAR_BiLaL 024',
-    'UniQAIDAR_Bukra 004',
-    'UniQAIDAR_Hewal 006',
-    'UniQAIDAR_NewsHeadLine 001',
-    'UniQAIDAR_NewsHeadLine 029',
-    'UniQAIDAR_NewsHeadLine 037',
-    'UniQAIDAR_Pure 001',
-    'QAIDAR_ISLAMIC02',
-    'UniQAIDAR_Subtitle_003',
-    'UniQAIDAR_Afarin_003',
-    'UniQAIDAR_Social Media 003',
-    'UniQAIDAR_Free 009',
-    'UniQAIDAR_Nastaliq 001',
-    'UniQAIDAR_Nastaliq 003',
-    'UniQAIDAR_Soz 001',
-    'UniQAIDAR_Soz 002',
-    'UniQAIDAR_Soz 003',
-    'UniQAIDAR_Soz 004',
-    'UniQAIDAR_Soz 005',
-    'UniQAIDAR_Soz 006',
-    'UniQAIDAR_Soz 007' // لێرە فاریزە و کۆماکەم بۆ چاک کردیت
+    'uniqaidar_peregraf_01'
     // هەر ناوێکی ترت هەیە لێرە زیادی بکە
 ];
 
@@ -1468,7 +1445,7 @@ input.addEventListener('input', (e) => {
 سەرنجڕاکێش و ڕێک: دیزاینێکی مۆدێرن و سەرنجڕاکێشیان هەیە.
 پشتیوانی زمانی کوردی: بە تەواوی کوردی و عەرەبی پشتیوانی دەکەن. 
 ئەم فۆنتانە یارمەتیدەرن بۆ ئەوەی بەرهەمەکانت زیاتر پرۆفیشناڵ و جوان دەربکەون.</p>
-        <p>گەشەپێدەر: UniQaidar</p>
+        <p>گەشەپێدەر: قه‌یدار ڕه‌حیم</p>
     </div>
 </div>
 
