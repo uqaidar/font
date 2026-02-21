@@ -693,13 +693,6 @@ i, .fa, .fas, .fab, .far, .fa-brands, [class*="fa-"] {
 @font-face { font-family: 'uniqaidar_xal_01'; src: url('fonts/xal/uniqaidar_xal_01.ttf'); }
 @font-face { font-family: 'uniqaidar_xal_02'; src: url('fonts/xal/uniqaidar_xal_02.ttf'); }
 
-@font-face { font-family: 'uniqaidar_fastlink01'; src: url('fonts/fastlink/uniqaidar_fastlink01.ttf'); }
-@font-face { font-family: 'uniqaidar_fastlink02'; src: url('fonts/fastlink/uniqaidar_fastlink02.ttf'); }
-@font-face { font-family: 'uniqaidar_fastlink03'; src: url('fonts/fastlink/uniqaidar_fastlink03.ttf'); }
-@font-face { font-family: 'uniqaidar_fastlink04'; src: url('fonts/fastlink/uniqaidar_fastlink04.ttf'); }
-
-
-
 footer {
     text-align: center;
     padding: 4px 10px;
@@ -1012,11 +1005,11 @@ footer strong {
     <div class="modal-content">
         <span class="close-download">&times;</span>
         <h2>داگرتنی فۆنتەکان</h2>
-        <div class="download-box" style="text-align: center; padding: 12px 25px !important;">
+        <div class="download-box" style="text-align: center; padding: 20px;">
             <i class="fas fa-file-archive" style="font-size: 50px; color: #f1c40f; margin-bottom: 15px;"></i>
             <p style="font-size: 1.2rem; margin-bottom: 20px;">فەرموو لەگەڵ داگرتنی 420 فۆنتی یونی قەیدار بە شێوەی زیپ (ZIP)</p>
             
-            <a href="kak qaidar" target="_blank" class="header-btn" style="background: #27ae60; padding: 12px 30px; font-size: 1.0rem;">
+            <a href="لینکەکەت_لێرە_دابنێ" target="_blank" class="header-btn" style="background: #27ae60; padding: 12px 30px; font-size: 1.1rem;">
                 <i class="fas fa-cloud-download-alt"></i> كلیك بكه‌ بۆ داگرتنی فۆنته‌كان 
             </a>
         </div>
@@ -1051,12 +1044,11 @@ footer strong {
             <button class="filter-btn" onclick="filterFonts('semic', this)">سەمیک</button>
             <button class="filter-btn" onclick="filterFonts('jrnus', this)">ژێرنووس</button>
             <button class="filter-btn" onclick="filterFonts('media', this)">میدیا</button>
-            <button class="filter-btn" onclick="filterFonts('fastlink', this)">فاست لینك</button>
+                   <button class="filter-btn" onclick="filterFonts('nwe', this)">نوێ</button>
 
         </div>
     </div>
 </div>
-
 <div class="font-grid" id="font-grid"></div>
 <script>
     /* --- لێرە لیستی JavaScript ناو final_code.txt دابنێ --- */
@@ -1300,11 +1292,7 @@ const fonts = [
     { name: "uniqaidar_pure_001", file: "uniqaidar_pure_001", path: "fonts/hwal/uniqaidar_pure_001.ttf", zip: "fonts/hwal/uniqaidar_pure_001.zip", category: "hwal" },
     { name: "uniqaidar_pure_002", file: "uniqaidar_pure_002", path: "fonts/hwal/uniqaidar_pure_002.ttf", zip: "fonts/hwal/uniqaidar_pure_002.zip", category: "hwal" },
     { name: "uniqaidar_pure_003", file: "uniqaidar_pure_003", path: "fonts/hwal/uniqaidar_pure_003.ttf", zip: "fonts/hwal/uniqaidar_pure_003.zip", category: "hwal" },
-    { name: "qaidar_islamic00", file: "qaidar_islamic00", path: "fonts/islami/qaidar_islamic00.ttf", zip: "fonts/islami/qaidar_islamic00.zip", category: "islami" },
-    { name: "qaidar_islamic01", file: "qaidar_islamic01", path: "fonts/islami/qaidar_islamic01.ttf", zip: "fonts/islami/qaidar_islamic01.zip", category: "islami" },
-    { name: "qaidar_islamic02", file: "qaidar_islamic02", path: "fonts/islami/qaidar_islamic02.ttf", zip: "fonts/islami/qaidar_islamic02.zip", category: "islami" },
-    { name: "qaidar_islamic03", file: "qaidar_islamic03", path: "fonts/islami/qaidar_islamic03.ttf", zip: "fonts/islami/qaidar_islamic03.zip", category: "islami" },
-    { name: "qaidar_islamic04", file: "qaidar_islamic04", path: "fonts/islami/qaidar_islamic04.ttf", zip: "fonts/islami/qaidar_islamic04.zip", category: "islami" },
+   
     { name: "uniqaidar_esra&mieraj", file: "uniqaidar_esra&mieraj", path: "fonts/islami/uniqaidar_esra&mieraj.ttf", zip: "fonts/islami/uniqaidar_esra&mieraj.zip", category: "islami" },
     { name: "uniqaidar_islamic00", file: "uniqaidar_islamic00", path: "fonts/islami/uniqaidar_islamic00.ttf", zip: "fonts/islami/uniqaidar_islamic00.zip", category: "islami" },
     { name: "uniqaidar_islamic01", file: "uniqaidar_islamic01", path: "fonts/islami/uniqaidar_islamic01.ttf", zip: "fonts/islami/uniqaidar_islamic01.zip", category: "islami" },
@@ -1498,14 +1486,6 @@ const fonts = [
     { name: "uniqaidar_xal_00", file: "uniqaidar_xal_00", path: "fonts/xal/uniqaidar_xal_00.ttf", zip: "fonts/xal/uniqaidar_xal_00.zip", category: "xal" },
     { name: "uniqaidar_xal_01", file: "uniqaidar_xal_01", path: "fonts/xal/uniqaidar_xal_01.ttf", zip: "fonts/xal/uniqaidar_xal_01.zip", category: "xal" },
     { name: "uniqaidar_xal_02", file: "uniqaidar_xal_02", path: "fonts/xal/uniqaidar_xal_02.ttf", zip: "fonts/xal/uniqaidar_xal_02.zip", category: "xal" },
-
-
-    { name: "uniqaidar_fastlink01", file: "uniqaidar_fastlink01", path: "fonts/fastlink/uniqaidar_fastlink01.ttf", zip: "fonts/fastlink/uniqaidar_fastlink01.zip", category: "fastlink" },
-    { name: "uniqaidar_fastlink02", file: "uniqaidar_fastlink02", path: "fonts/fastlink/uniqaidar_fastlink02.ttf", zip: "fonts/fastlink/uniqaidar_fastlink02.zip", category: "fastlink" },
-    { name: "uniqaidar_fastlink03", file: "uniqaidar_fastlink03", path: "fonts/fastlink/uniqaidar_fastlink03.ttf", zip: "fonts/fastlink/uniqaidar_fastlink03.zip", category: "fastlink" },
-    { name: "uniqaidar_fastlink04", file: "uniqaidar_fastlink04", path: "fonts/fastlink/uniqaidar_fastlink04.ttf", zip: "fonts/fastlink/uniqaidar_fastlink04.zip", category: "fastlink" },
-
-
 ];
 
 
