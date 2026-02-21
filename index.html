@@ -16,7 +16,6 @@
         }
 
 
-/* ١. سەپاندنی فۆنتەکە تەنها بۆ بەشە سەرەکییەکانی وێب سایتەکە */
 body, 
 .header, .header *, 
 .footer, .footer *, 
@@ -27,15 +26,12 @@ h1, h2 {
     font-family: 'uniqaidar_peregraf_01', Tahoma, Arial, sans-serif !important;
 }
 
-/* ٢. ڕێگەدان بە خانەی نمایشەکان (Cards) کە فۆنتە جیاوازەکانی خۆیان نیشان بدەن */
 .font-card h3, 
 .font-card p, 
 .font-card span {
     font-family: inherit !important;
 }
 
-
-/* ٣. پاراستنی هەموو جۆرە ئایکۆنەکان (ئاسایی و سۆشیاڵ میدیا) */
 i, .fa, .fas, .fab, .far, .fa-brands, [class*="fa-"] {
     font-family: "Font Awesome 6 Brands", "Font Awesome 6 Free", "Font Awesome 5 Brands", "Font Awesome 5 Free", "FontAwesome" !important;
     font-style: normal !important;
@@ -45,16 +41,12 @@ i, .fa, .fas, .fab, .far, .fa-brands, [class*="fa-"] {
     -webkit-font-smoothing: antialiased !important;
 }
 
-      /* بەشی هێدەر - تەسک کراوەتەوە */
         .header {
     position: relative;
-    /* ڕەنگە نوێیەکە لێرە جێگیر کراوە */
     background: #1a1a1a; 
-    /* ڕەنگی نووسینەکەمان کرد بە ڕەش بۆ ئەوەی لەسەر ڕەنگە کاڵەکە دیار بێت */
     color: #2d3436; 
     padding: 5px 10px;
     text-align: center;
-    /* سێبەرەکەمان کەمێک کاڵتر کردووەتەوە بۆ ئەوەی لەگەڵ ڕەنگە نوێیەکە بگونجێت */
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
@@ -70,11 +62,9 @@ i, .fa, .fas, .fab, .far, .fa-brands, [class*="fa-"] {
     justify-content: center;
     overflow: hidden;
 
-    /* --- زیادکراو بۆ ناسککردنەوەی فۆنتەکە --- */
-    font-weight: normal !important; /* ئەمە وادەکات بۆڵد نەمێنێت */
+    font-weight: normal !important; 
 }
 
-      /* ئایکۆنەکانی سۆشیاڵ میدیا */
         .social-links {
             position: absolute;
             top: 15px;
@@ -86,17 +76,16 @@ i, .fa, .fas, .fab, .far, .fa-brands, [class*="fa-"] {
         .header-logo {
     position: absolute;
     top: 65%;
-    right: -50px; /* لێرە کردمان بە 0 بۆ ئەوەی تەواو بچێتە لای ڕاست */
+    right: -50px; 
     transform: translateY(-50%);
     z-index: 2;
 }
 
 .header-logo img {
-    height: 200px; /* قەبارەکەمان لە 160وە کردە 200 (گەورەتر) */
-    width: 320px;  /* قەبارەکەمان لە 260وە کردە 320 (گەورەتر) */
+    height: 200px; 
+    width: 320px;  
     display: block;
     object-fit: contain;
-    /* ئەگەر ویستت لۆگۆکە کەمێک مەودای هەبێت لە لێواری شاشەکە، right بکە بە 5px یان 10px */
 }
 
         .social-icon {
@@ -119,7 +108,6 @@ i, .fa, .fas, .fab, .far, .fa-brands, [class*="fa-"] {
             transform: scale(1.1);
         }
 
-        /* بەشی گەڕان */
         .search-container { margin-top: 15px; }
 
         #test-input {
@@ -134,7 +122,7 @@ i, .fa, .fas, .fab, .far, .fa-brands, [class*="fa-"] {
             text-align: center;
         }
 .filter-label {
-    background: rgba(255, 255, 255, 0.2); /* کەمێک ڕوونتر لە پاشبنەماکە */
+    background: rgba(255, 255, 255, 0.2); 
     color: #fff;
     padding: 8px 15px;
     border-radius: 12px;
@@ -142,54 +130,50 @@ i, .fa, .fas, .fab, .far, .fa-brands, [class*="fa-"] {
     font-size: 0.9rem;
     display: flex;
     align-items: center;
-    border: 1px dashed rgba(255, 255, 255, 0.4); /* چوارچێوەیەکی هێڵ-هێڵ بۆ جیاکردنەوە */
-    margin-left: 10px; /* دووری دەخاتەوە لە دوگمەکانی تر */
-    pointer-events: none; /* وادەکات کلیکی لەسەر نەکرێت چونکە تەنها ناونیشانە */
+    border: 1px dashed rgba(255, 255, 255, 0.4); 
+    margin-left: 10px;
+    pointer-events: none; 
 }
 
-/* ئەگەر ئای کۆنەکەت بەکارنەهێنا، دەتوانیت ئەمە بۆ سەهمەکە بەکاربهێنیت */
 .filter-label::after {
     content: "";
     margin-right: 8px;
 }
-        /* بەشی دوگمەکانی فلتەر */
        .filter-container {
-    display: flex;         /* وادەکات تایتڵ و جوڵەکە بکەونە تەنیشت یەک */
-    align-items: center;   /* وادەکات هەموویان لەسەر یەک ئاست بن لە ڕووی بەرزییەوە */
+    display: flex;        
+    align-items: center;  
     background: #1a1a1a;
     padding: 10px 15px;
     position: sticky;
     top: 0;
     z-index: 1000;
-    overflow: hidden;      /* بۆ ئەوەی جوڵەکە لە شاشە دەرنەچێت */
-    gap: 10px;             /* بۆشایی نێوان تایتڵەکە و دەستپێکی جوڵەکە */
+    overflow: hidden;   
+    gap: 10px;           
 }
 
 .filter-label {
-    white-space: nowrap;   /* وادەکات تایتڵەکە نەشکێتەوە بۆ دێڕی دووەم */
+    white-space: nowrap;  
     color: white;
     font-weight: bold;
     font-size: 0.95rem;
     padding-left: 10px;
-    border-left: 2px solid rgba(255,255,255,0.2); /* هێڵێکی جیاکەرەوە */
+    border-left: 2px solid rgba(255,255,255,0.2);
     cursor: default;
     pointer-events: none;
-    z-index: 1001;         /* دڵنیایی دەدات کە تایتڵەکە لەسەرەوە دەمێنێتەوە */
+    z-index: 1001;        
 }
 
-/* ئەمە خانە سەرەکییەکە چاک دەکات */
 .marquee-wrapper {
-    overflow: visible !important; /* ڕێگە دەدات دوگمەکان دیار بن */
+    overflow: visible !important; 
     width: 100%;
 }
 
-/* ئەمە وادەکات دوگمەکان بپەڕنە دێڕی دووەم */
 .marquee-content {
     display: flex !important;
-    flex-wrap: wrap !important;   /* گرنگترین دێڕ بۆ ئەوەی بێنە خوارەوە */
-    justify-content: center;      /* دوگمەکان دەخاتە ناوەڕاست */
-    gap: 10px;                    /* مەودای نێوان دوگمەکان */
-    animation: none !important;    /* ئەگەر جوڵەی (Marquee) هەبێت ڕای دەگرێت */
+    flex-wrap: wrap !important;   
+    justify-content: center;     
+    gap: 10px;                 
+    animation: none !important;  
     width: 100% !important;
 }
 
@@ -197,18 +181,15 @@ i, .fa, .fas, .fab, .far, .fa-brands, [class*="fa-"] {
     animation-play-state: paused;
 }
 
-/* --- بەشی چاککراو --- */
 
 @keyframes scroll-left {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
 }
 
-/* لێرە هەڵە کۆنەکەمان پاککردەوە */
 
-    /* کەمکردنەوەی پادینگ بۆ 4px لە سەر و خوار بۆ ئەوەی زۆر گەورە نەبێت */
  .filter-btn {
-    padding: 0 18px;      /* لادانی پادینگی سەر و خوار چونکە Height بەکاردێنین */
+    padding: 0 18px;    
     border: 1px solid rgba(255, 255, 255, 0.3);
     background: rgba(255, 255, 255, 0.1);
     color: white;
@@ -219,10 +200,10 @@ i, .fa, .fas, .fab, .far, .fa-brands, [class*="fa-"] {
     transition: all 0.3s ease;
     
     white-space: nowrap; 
-    display: inline-flex;  /* گۆڕان بۆ فێڵکس بۆ ئەوەی فۆنتەکە بە وردی لە ناوەڕاست بێت */
-    align-items: center;   /* هاوسەنگکردنی ستوونی نووسینەکە */
+    display: inline-flex; 
+    align-items: center;  
     height: 35px;
-    flex-shrink: 0;        /* ڕێگری لەوەی دوگمەکە خۆی بچووک بکاتەوە و نووسینەکە تێکبچێت */
+    flex-shrink: 0;    
 }
 
 .filter-btn.active, .filter-btn:hover {
@@ -250,7 +231,6 @@ i, .fa, .fas, .fab, .far, .fa-brands, [class*="fa-"] {
     border: 1px solid #eee;
     transition: 0.3s;
 }
-/* --- کۆتایی بەشی چاککراو --- */
         .preview {
             font-size: 2.5rem;
             margin: 20px 0;
@@ -269,8 +249,7 @@ i, .fa, .fas, .fab, .far, .fa-brands, [class*="fa-"] {
             font-weight: bold;
             margin-top: auto;
         }
-        /* --- لێرە کۆدی CSS ناو final_code.txt دابنێ --- */
-        /* [PASTE ALL @font-face HERE] */
+
 /* CSS Fonts */
 @font-face { font-family: 'uniqaidar_akalwand'; src: url('fonts/ali/uniqaidar_akalwand.ttf'); }
 @font-face { font-family: 'uniqaidar_akarabesque'; src: url('fonts/ali/uniqaidar_akarabesque.ttf'); }
@@ -693,26 +672,33 @@ i, .fa, .fas, .fab, .far, .fa-brands, [class*="fa-"] {
 @font-face { font-family: 'uniqaidar_xal_01'; src: url('fonts/xal/uniqaidar_xal_01.ttf'); }
 @font-face { font-family: 'uniqaidar_xal_02'; src: url('fonts/xal/uniqaidar_xal_02.ttf'); }
 
+@font-face { font-family: 'uniqaidar_fastlink01'; src: url('fonts/fastlink/uniqaidar_fastlink01.ttf'); }
+@font-face { font-family: 'uniqaidar_fastlink02'; src: url('fonts/fastlink/uniqaidar_fastlink02.ttf'); }
+@font-face { font-family: 'uniqaidar_fastlink03'; src: url('fonts/fastlink/uniqaidar_fastlink03.ttf'); }
+@font-face { font-family: 'uniqaidar_fastlink04'; src: url('fonts/fastlink/uniqaidar_fastlink04.ttf'); }
+
+
+
 footer {
     text-align: center;
     padding: 4px 10px;
-    background-color: #1a252f; /* ڕەنگێکی تۆختر بۆ ئەوەی جیاواز بێت لە هێدەرەکە */
+    background-color: #1a252f; 
     color: #ecf0f1;
     font-family: 'Segoe UI', Arial, sans-serif;
     margin-top: 50px;
-    border-top: 4px solid #27ae60; /* هێڵێکی سەوزی جوان لەسەرەوەی */
+    border-top: 4px solid #27ae60; 
 }
 
 footer p {
     margin: 5px 0;
-    letter-spacing: 1px; /* بۆ ئەوەی نووسینە ئینگلیزییەکە کراوەتر بێت */
+    letter-spacing: 1px; 
 }
 
 footer strong {
-    color: #27ae60; /* ناوی خۆت بە سەوزی دەردەکەوێت */
+    color: #27ae60; 
     font-size: 1.1rem;
 }
-/* قوتووی دەرەوە بۆ شاردنەوەی ئەو بەشانەی لە شاشە دەچنە دەرەوە */
+
 .marquee-wrapper {
     overflow: hidden;
     white-space: nowrap;
@@ -720,9 +706,7 @@ footer strong {
     display: flex;
 }
 
-/* ڕێکخستنی فلتەرەکە - ئەمە بە تەواوی جێگیر و لە ناوەڕاست دەبێت */
 .filter-container {
-    /* ١. ئەم دوو دێڕە گرنگترینن بۆ چەق (Center) */
     display: flex; 
     margin: 0 auto !important; 
     /* ٢. ئەمانەش بۆ شێوەکەی */
@@ -732,13 +716,11 @@ footer strong {
     top: 0;
     z-index: 1000;
     
-    /* ٣. دڵنیابوون لەوەی پاناییەکەی زیادە نییە */
     max-width: fit-content; 
     min-width: 200px;
-    border-radius: 0 0 15px 15px; /* کەمێک مۆدێرنتر */
+    border-radius: 0 0 15px 15px; 
 }
 
-/* ستایلی دوگمەکان وەک خۆی، تەنها بۆ ناوەڕاستبوون ڕێکخراوە */
 .filter-btn {
     padding: 9px 18px;
     margin: 3px 0px;
@@ -765,8 +747,6 @@ footer strong {
 }
 
 
-/* شێوازی گشتی پەنجەرە شاردراوەکە */
-/* پاشبنەمای گشتی کە کەمێک لێڵ بێت */
 .modal {
     display: none;
     position: fixed;
@@ -780,7 +760,6 @@ footer strong {
     animation: fadeIn 0.3s ease;
 }
 
-/* کارتی ناوەڕاست */
 .modal-content {
     background: linear-gradient(145deg, #ffffff, #f0f4f8);
     margin: 10% auto;
@@ -797,7 +776,6 @@ footer strong {
     animation: slideUp 0.4s ease-out;
 }
 
-/* نیشانەی (X) */
 .close-btn {
     position: absolute;
     right: 20px;
@@ -819,9 +797,8 @@ footer strong {
     transform: rotate(90deg);
 }
 
-/* ستایلی نووسینەکان */
 .modal-content h2 {
-    color: #339cff; /* هەمان ئەو شینەی بۆ دوگمەکانت دانا */
+    color: #339cff; 
     margin-bottom: 20px;
     font-size: 24px;
     border-bottom: 2px solid #f0f0f0;
@@ -835,7 +812,7 @@ footer strong {
     margin-bottom: 15px;
 }
 
-/* ئەنیمەیشن بۆ هاتنە ناوەوە */
+
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -847,7 +824,6 @@ footer strong {
 }
 
 
-/* ستایڵی گشتی بۆ دوگمەکانی هێدەر */
 .header-btn {
     display: inline-flex;
     align-items: center;
@@ -856,7 +832,7 @@ footer strong {
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.3);
     color: white;
-    text-decoration: none; /* بۆ ئەوەی هێڵی ژێر ڕەبەتەکە نەمێنێت */
+    text-decoration: none;
     border-radius: 20px;
     font-size: 0.9rem;
     cursor: pointer;
@@ -864,12 +840,11 @@ footer strong {
 }
 
 .header-btn:hover {
-    background: #27ae60; /* ڕەنگی سەوز کاتێک ماوس دەچێتە سەری */
+    background: #27ae60; 
     border-color: #27ae60;
     transform: translateY(-2px);
 }
 
-/* دڵنیابوونەوە لەوەی دوگمەکان لە تەنیشت یەکترن */
 .header-content {
     display: flex;
     flex-direction: column;
@@ -885,7 +860,7 @@ footer strong {
 
 .close-download {
     color: #aaa;
-    float: left; /* چونکە سایتەکە RTLە، دەچێتە لای چەپ */
+    float: left; 
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
@@ -902,38 +877,33 @@ footer strong {
 }
 
 @media (max-width: 768px) {
-    /* ١. ڕێگری لە کەوتنی توخمەکان بەسەر یەکدا لە هێدەر */
     .header-content {
         display: flex;
-        flex-direction: column; /* هەموو شتێک دەخاتە ژێر یەک نەک تەنیشت یەک */
+        flex-direction: column; 
         align-items: center;
         text-align: center;
-        height: auto !important; /* ڕێگە دەدات بەپێی پێویست درێژ ببێت */
+        height: auto !important; 
         padding: 20px 10px;
     }
 
-    /* ٢. چاککردنی تایتڵەکە */
     .header h1 {
-        position: static !important; /* ئەگەر پۆزیشنەکەی تێکچوو بێت */
+        position: static !important; 
         margin: 10px 0 !important;
         font-size: 1.3rem !important;
         line-height: 1.4;
     }
 
-    /* ٣. چاککردنی لۆگۆ یان وێنەی هێدەر */
     .header img, .logo {
-        max-width: 80px; /* قەبارەی لۆگۆکە بچووک بکەرەوە */
+        max-width: 80px; 
         margin-bottom: 10px;
     }
 
-    /* ٤. سێرچەکە جیا بکەرەوە تا نەکەوێتە سەر لۆگۆ */
     .search-container {
         width: 90% !important;
         position: static !important;
         margin: 15px auto !important;
     }
 
-    /* ٥. سوشیال میدیا و دوگمەکانی تر */
     .social-links, .header-actions {
         display: flex;
         justify-content: center;
@@ -943,7 +913,6 @@ footer strong {
         position: static !important;
     }
 }
-    /* ٢. ڕیزکردنی دوگمەکانی هێدەر (زانیاری و داگرتن) بە ستوونی */
     .header-actions {
         flex-direction: column;
         width: 100%;
@@ -952,31 +921,29 @@ footer strong {
     }
 
     .header-btn {
-        width: 80%; /* دوگمەکان کەمێک پانتر دەبن بۆ ئەوەی ئاسانتر کلیکیان لێ بکرێت */
+        width: 80%; 
         justify-content: center;
     }
 
-    /* ٣. ڕێکخستنی دوگمەکانی فلتەر (ئەوانەی کە پێم دایت) */
     .filter-group {
         gap: 8px;
         padding: 5px;
     }
 
     .filter-btn {
-        font-size: 0.75rem !important; /* بچووککردنەوەی نووسینی دوگمەکان */
+        font-size: 0.75rem !important; 
         padding: 0 12px !important;
         height: 30px !important;
     }
 
-    /* ٤. کەمکردنەوەی مەودای خانەکان لە مۆبایلدا بۆ ئەوەی شوێن بەفیڕۆ نەچێت */
     .fonts-grid {
-        grid-template-columns: 1fr; /* تەنها یەک خانە لەسەر یەک نیشان بدە */
+        grid-template-columns: 1fr; 
         gap: 15px;
         padding: 10px;
     }
     
     .font-card {
-        margin: 0 5px; /* کەمێک دووری لە لێوارەکانی شاشە */
+        margin: 0 5px; 
     }
 }
 
@@ -1005,11 +972,11 @@ footer strong {
     <div class="modal-content">
         <span class="close-download">&times;</span>
         <h2>داگرتنی فۆنتەکان</h2>
-        <div class="download-box" style="text-align: center; padding: 20px;">
+        <div class="download-box" style="text-align: center; padding: 12px 25px !important;">
             <i class="fas fa-file-archive" style="font-size: 50px; color: #f1c40f; margin-bottom: 15px;"></i>
             <p style="font-size: 1.2rem; margin-bottom: 20px;">فەرموو لەگەڵ داگرتنی 420 فۆنتی یونی قەیدار بە شێوەی زیپ (ZIP)</p>
             
-            <a href="لینکەکەت_لێرە_دابنێ" target="_blank" class="header-btn" style="background: #27ae60; padding: 12px 30px; font-size: 1.1rem;">
+            <a href="kak qaidar" target="_blank" class="header-btn" style="background: #27ae60; padding: 12px 30px; font-size: 1.0rem;">
                 <i class="fas fa-cloud-download-alt"></i> كلیك بكه‌ بۆ داگرتنی فۆنته‌كان 
             </a>
         </div>
@@ -1044,15 +1011,14 @@ footer strong {
             <button class="filter-btn" onclick="filterFonts('semic', this)">سەمیک</button>
             <button class="filter-btn" onclick="filterFonts('jrnus', this)">ژێرنووس</button>
             <button class="filter-btn" onclick="filterFonts('media', this)">میدیا</button>
-                   <button class="filter-btn" onclick="filterFonts('nwe', this)">نوێ</button>
+            <button class="filter-btn" onclick="filterFonts('fastlink', this)">فاست لینك</button>
 
         </div>
     </div>
 </div>
+
 <div class="font-grid" id="font-grid"></div>
 <script>
-    /* --- لێرە لیستی JavaScript ناو final_code.txt دابنێ --- */
-    /* [PASTE const fontList = [...] HERE] */
 
 const fonts = [
     { 
@@ -1292,7 +1258,11 @@ const fonts = [
     { name: "uniqaidar_pure_001", file: "uniqaidar_pure_001", path: "fonts/hwal/uniqaidar_pure_001.ttf", zip: "fonts/hwal/uniqaidar_pure_001.zip", category: "hwal" },
     { name: "uniqaidar_pure_002", file: "uniqaidar_pure_002", path: "fonts/hwal/uniqaidar_pure_002.ttf", zip: "fonts/hwal/uniqaidar_pure_002.zip", category: "hwal" },
     { name: "uniqaidar_pure_003", file: "uniqaidar_pure_003", path: "fonts/hwal/uniqaidar_pure_003.ttf", zip: "fonts/hwal/uniqaidar_pure_003.zip", category: "hwal" },
-   
+    { name: "qaidar_islamic00", file: "qaidar_islamic00", path: "fonts/islami/qaidar_islamic00.ttf", zip: "fonts/islami/qaidar_islamic00.zip", category: "islami" },
+    { name: "qaidar_islamic01", file: "qaidar_islamic01", path: "fonts/islami/qaidar_islamic01.ttf", zip: "fonts/islami/qaidar_islamic01.zip", category: "islami" },
+    { name: "qaidar_islamic02", file: "qaidar_islamic02", path: "fonts/islami/qaidar_islamic02.ttf", zip: "fonts/islami/qaidar_islamic02.zip", category: "islami" },
+    { name: "qaidar_islamic03", file: "qaidar_islamic03", path: "fonts/islami/qaidar_islamic03.ttf", zip: "fonts/islami/qaidar_islamic03.zip", category: "islami" },
+    { name: "qaidar_islamic04", file: "qaidar_islamic04", path: "fonts/islami/qaidar_islamic04.ttf", zip: "fonts/islami/qaidar_islamic04.zip", category: "islami" },
     { name: "uniqaidar_esra&mieraj", file: "uniqaidar_esra&mieraj", path: "fonts/islami/uniqaidar_esra&mieraj.ttf", zip: "fonts/islami/uniqaidar_esra&mieraj.zip", category: "islami" },
     { name: "uniqaidar_islamic00", file: "uniqaidar_islamic00", path: "fonts/islami/uniqaidar_islamic00.ttf", zip: "fonts/islami/uniqaidar_islamic00.zip", category: "islami" },
     { name: "uniqaidar_islamic01", file: "uniqaidar_islamic01", path: "fonts/islami/uniqaidar_islamic01.ttf", zip: "fonts/islami/uniqaidar_islamic01.zip", category: "islami" },
@@ -1486,6 +1456,14 @@ const fonts = [
     { name: "uniqaidar_xal_00", file: "uniqaidar_xal_00", path: "fonts/xal/uniqaidar_xal_00.ttf", zip: "fonts/xal/uniqaidar_xal_00.zip", category: "xal" },
     { name: "uniqaidar_xal_01", file: "uniqaidar_xal_01", path: "fonts/xal/uniqaidar_xal_01.ttf", zip: "fonts/xal/uniqaidar_xal_01.zip", category: "xal" },
     { name: "uniqaidar_xal_02", file: "uniqaidar_xal_02", path: "fonts/xal/uniqaidar_xal_02.ttf", zip: "fonts/xal/uniqaidar_xal_02.zip", category: "xal" },
+
+
+    { name: "uniqaidar_fastlink01", file: "uniqaidar_fastlink01", path: "fonts/fastlink/uniqaidar_fastlink01.ttf", zip: "fonts/fastlink/uniqaidar_fastlink01.zip", category: "fastlink" },
+    { name: "uniqaidar_fastlink02", file: "uniqaidar_fastlink02", path: "fonts/fastlink/uniqaidar_fastlink02.ttf", zip: "fonts/fastlink/uniqaidar_fastlink02.zip", category: "fastlink" },
+    { name: "uniqaidar_fastlink03", file: "uniqaidar_fastlink03", path: "fonts/fastlink/uniqaidar_fastlink03.ttf", zip: "fonts/fastlink/uniqaidar_fastlink03.zip", category: "fastlink" },
+    { name: "uniqaidar_fastlink04", file: "uniqaidar_fastlink04", path: "fonts/fastlink/uniqaidar_fastlink04.ttf", zip: "fonts/fastlink/uniqaidar_fastlink04.zip", category: "fastlink" },
+
+
 ];
 
 
@@ -1493,7 +1471,7 @@ const fonts = [
    const grid = document.getElementById('font-grid');
     const input = document.getElementById('test-input');
 
-    function renderFonts(text, data = fonts) { // لێرە گۆڕیم بۆ fonts چونکە ناوی لیستەکەت وایە
+    function renderFonts(text, data = fonts) { //
         grid.innerHTML = "";
         data.forEach(font => {
             const card = document.createElement('div');
@@ -1514,20 +1492,16 @@ const fonts = [
     }
 
     function filterFonts(category, btn) {
-    // لادانی ڕەنگی چالاک لە هەموو دوگمەکان و دانانی بۆ ئەم دوگمەیە
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
     if(btn) btn.classList.add('active');
 
-    // فلتەرکردنی فۆنتەکان (لێرە ناوی لیستەکە کرا بە fonts بۆ ئەوەی لەگەڵ پایتۆنەکە یەک بێت)
     const filtered = (category === 'all') 
         ? fonts 
         : fonts.filter(f => f.category === category);
     
-    // نیشاندانی فۆنتە فلتەرکراوەکان
     renderFonts(input.value, filtered);
 }
 
-// فەنکشنی ڕەندەرکردنی فۆنتەکان بە فایلی زیپەوە
 function renderFonts(text, data = fonts) {
     grid.innerHTML = "";
     data.forEach(font => {
@@ -1547,26 +1521,22 @@ function renderFonts(text, data = fonts) {
     });
 }
 
-// ئەم بەشە وادەکات یەکەمجار تەنها نەستەلیق پیشان بدات
+//تەنها نەستەلیق 
 document.addEventListener('DOMContentLoaded', () => {
     const nastaliqBtn = document.querySelector('.filter-btn[onclick*="nastaliq"]');
     filterFonts('nastaliq', nastaliqBtn);
 });
 
-   // ئەمە بەشی چاککراوی سێرچ و تاقیکردنەوەی فۆنتەکەیە
-const searchInput = document.getElementById('search-input'); // دڵنیابە ئایدی ئینپوتی سێرچەکەت ئەمەیە
-const previewInput = document.getElementById('test-input');   // ئایدی ئینپوتی تاقیکردنەوەکە
+const searchInput = document.getElementById('search-input'); 
+const previewInput = document.getElementById('test-input'); 
 
-// کاتێک لە خانەی گەڕان یان خانەی تاقیکردنەوە دەنووسیت
 const updateAll = (e) => {
     const text = e.target.value;
     
-    // ئەگەر لە سێرچ نووسیت، با تێکستی تاقیکردنەوەکەش هەمان شت بێت
     if (e.target.id === 'search-input') {
         previewInput.value = text;
     }
     
-    // دووبارە ڕەندەرکردنەوەی فۆنتەکان بە تێکستە نوێیەکە
     const activeCategory = document.querySelector('.filter-btn.active')?.getAttribute('onclick')?.match(/'([^']+)'/)?.[1] || 'all';
     
     if (activeCategory === 'all') {
@@ -1577,21 +1547,17 @@ const updateAll = (e) => {
     }
 };
 
-// بەستنەوەی فەرمانەکە بە هەردوو خانەکە
 if (searchInput) searchInput.addEventListener('input', updateAll);
 if (previewInput) previewInput.addEventListener('input', updateAll);
 
     renderFonts("");
-// ١. ناوی ئەو فۆنتانەی کە لە CSS ناساندووتن لێرە بنووسە
 const myFonts = [
     'uniqaidar_peregraf_01'
-    // هەر ناوێکی ترت هەیە لێرە زیادی بکە
 ];
 
 let fontIndex = 0;
 const titleElement = document.getElementById('main-title');
 
-// ٢. فەرمانی گۆڕینی فۆنتەکە
 function changeTitleFont() {
     if (titleElement) {
         titleElement.style.fontFamily = `'${myFonts[fontIndex]}'`;
@@ -1599,29 +1565,23 @@ function changeTitleFont() {
     }
 }
 
-// ٣. setInterval فەرمان دەکات کە هەموو ٣ چرکە جارێک فۆنتەکە بگۆڕێت
 setInterval(changeTitleFont, 3000);
 
-// ئەم بەشە بەرپرسە لەوەی هەرچی بنووسیت یەکسەر لە فۆنتەکاندا دەربکەوێت
 input.addEventListener('input', (e) => {
     const text = e.target.value;
     const activeBtn = document.querySelector('.filter-btn.active');
     
-    // دیاریکردنی جۆری فلتەرەکە بۆ ئەوەی تەنها فۆنتە دیارەکان نووسینەکەیان بگۆڕێت
     let category = 'all';
     if (activeBtn) {
-        // لێرە فەنکشنەکە ناوەکەت بۆ دەردەهێنێت لەناو onclick
         const onclickAttr = activeBtn.getAttribute('onclick');
         category = onclickAttr.split("'")[1];
     }
 
     const filtered = (category === 'all') ? fonts : fonts.filter(f => f.category === category);
     
-    // ڕاستەوخۆ دووبارە فۆنتەکان پیشان دەداتەوە بە نووسینە نوێیەکە
     renderFonts(text, filtered);
 });
 
-// کۆدی کردنەوەی پەنجەرەی داگرتن
 var downloadModal = document.getElementById("downloadModal");
 var downloadBtn = document.getElementById("downloadModalBtn");
 var closeDownload = document.getElementsByClassName("close-download")[0];
@@ -1634,7 +1594,6 @@ closeDownload.onclick = function() {
     downloadModal.style.display = "none";
 }
 
-// کاتێک لە دەرەوەی پەنجەرەکە کلیک کرا دابخرێت
 window.onclick = function(event) {
     if (event.target == downloadModal) {
         downloadModal.style.display = "none";
@@ -1662,13 +1621,11 @@ window.onclick = function(event) {
 </div>
 
 <script>
-    // چاوەڕێ بکە تا لاپەڕەکە بە تەواوی بار دەبێت
     document.addEventListener('DOMContentLoaded', function() {
         var modal = document.getElementById("aboutModal");
         var btn = document.getElementById("aboutBtn");
         var span = document.getElementsByClassName("close-btn")[0];
 
-        // کاتێک کلیک لە دوگمەی (زانیاری) دەکرێت
         if(btn) {
             btn.onclick = function(e) {
                 e.preventDefault();
@@ -1676,14 +1633,12 @@ window.onclick = function(event) {
             }
         }
 
-        // کاتێک کلیک لە (X) دەکرێت
         if(span) {
             span.onclick = function() {
                 modal.style.display = "none";
             }
         }
 
-        // کاتێک کلیک لە دەرەوەی پەنجەرەکە دەکرێت
         window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
