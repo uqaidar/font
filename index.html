@@ -8,20 +8,44 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
+
         :root {
             --primary: #2c3e50;
             --accent: #27ae60;
             --bg: #f4f7f6;
         }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg);
-            margin: 0;
-            padding: 0;
-        }
 
-        /* بەشی هێدەر - تەسک کراوەتەوە */
+/* ١. سەپاندنی فۆنتەکە تەنها بۆ بەشە سەرەکییەکانی وێب سایتەکە */
+body, 
+.header, .header *, 
+.footer, .footer *, 
+.search-container, .search-container input, 
+button, 
+.modal-content, .modal-content *,
+h1, h2 {
+    font-family: 'uniqaidar_peregraf_01', Tahoma, Arial, sans-serif !important;
+}
+
+/* ٢. ڕێگەدان بە خانەی نمایشەکان (Cards) کە فۆنتە جیاوازەکانی خۆیان نیشان بدەن */
+.font-card h3, 
+.font-card p, 
+.font-card span {
+    font-family: inherit !important;
+}
+
+
+/* ٣. پاراستنی هەموو جۆرە ئایکۆنەکان (ئاسایی و سۆشیاڵ میدیا) */
+i, .fa, .fas, .fab, .far, .fa-brands, [class*="fa-"] {
+    font-family: "Font Awesome 6 Brands", "Font Awesome 6 Free", "Font Awesome 5 Brands", "Font Awesome 5 Free", "FontAwesome" !important;
+    font-style: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    line-height: 1 !important;
+    -webkit-font-smoothing: antialiased !important;
+}
+
+      /* بەشی هێدەر - تەسک کراوەتەوە */
         .header {
     position: relative;
     /* ڕەنگە نوێیەکە لێرە جێگیر کراوە */
@@ -46,7 +70,9 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-}        /* ئایکۆنەکانی سۆشیاڵ میدیا */
+}  
+
+      /* ئایکۆنەکانی سۆشیاڵ میدیا */
         .social-links {
             position: absolute;
             top: 15px;
@@ -149,15 +175,20 @@
     z-index: 1001;         /* دڵنیایی دەدات کە تایتڵەکە لەسەرەوە دەمێنێتەوە */
 }
 
+/* ئەمە خانە سەرەکییەکە چاک دەکات */
 .marquee-wrapper {
-    flex-grow: 1;          /* وادەکات هەموو بۆشاییەکەی تەنیشت تایتڵەکە بگرێت */
-    overflow: hidden;
-    white-space: nowrap;
+    overflow: visible !important; /* ڕێگە دەدات دوگمەکان دیار بن */
+    width: 100%;
 }
 
+/* ئەمە وادەکات دوگمەکان بپەڕنە دێڕی دووەم */
 .marquee-content {
-    display: inline-flex;
-    gap: 15px;
+    display: flex !important;
+    flex-wrap: wrap !important;   /* گرنگترین دێڕ بۆ ئەوەی بێنە خوارەوە */
+    justify-content: center;      /* دوگمەکان دەخاتە ناوەڕاست */
+    gap: 10px;                    /* مەودای نێوان دوگمەکان */
+    animation: none !important;    /* ئەگەر جوڵەی (Marquee) هەبێت ڕای دەگرێت */
+    width: 100% !important;
 }
 
 .marquee-content:hover {
@@ -172,8 +203,10 @@
 }
 
 /* لێرە هەڵە کۆنەکەمان پاککردەوە */
-.filter-btn {
-    padding: 8px 18px;
+
+    /* کەمکردنەوەی پادینگ بۆ 4px لە سەر و خوار بۆ ئەوەی زۆر گەورە نەبێت */
+ .filter-btn {
+    padding: 0 18px;      /* لادانی پادینگی سەر و خوار چونکە Height بەکاردێنین */
     border: 1px solid rgba(255, 255, 255, 0.3);
     background: rgba(255, 255, 255, 0.1);
     color: white;
@@ -182,16 +215,20 @@
     font-weight: bold;
     font-size: 0.85rem;
     transition: all 0.3s ease;
-    flex-shrink: 0;
-    white-space: nowrap;
+    
+    white-space: nowrap; 
+    display: inline-flex;  /* گۆڕان بۆ فێڵکس بۆ ئەوەی فۆنتەکە بە وردی لە ناوەڕاست بێت */
+    align-items: center;   /* هاوسەنگکردنی ستوونی نووسینەکە */
+    height: 35px;
+    flex-shrink: 0;        /* ڕێگری لەوەی دوگمەکە خۆی بچووک بکاتەوە و نووسینەکە تێکبچێت */
 }
 
 .filter-btn.active, .filter-btn:hover {
-    background: #3498db; /* ڕەنگە گەشەکە */
+    background: #3498db;
     color: white;
     border-color: #3498db;
     transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0, 206, 201, 0.3);
+    box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
 }
 
 .font-grid {
@@ -830,7 +867,8 @@ footer strong {
 
     <h1 id="main-title">فۆنته‌كانی یونی قه‌یدار</h1>
     <div class="search-container">
-        <input type="text" id="test-input" placeholder="فۆنته‌كانی یونی قه‌یدار - فۆنتی كوردی...">
+        <input type="text" id="test-input" placeholder="لێرەدا بنووسە بۆ تاقیکردنەوەی فۆنتەکان
+...">
     </div>
 </div> 
 <div class="filter-container">
@@ -1347,9 +1385,9 @@ function renderFonts(text, data = fonts) {
                 <span style="color:var(--primary)">${font.name}</span>
             </div>
             <div class="preview" style="font-family: '${font.name}'">
-                ${text || 'کوردستان نیشتمانی جوانم'}
+                ${text || 'فۆنتەکانی یونی‌قەیدار - فۆنتی کوردی'}
             </div>
-            <a href="${font.zip}" class="download-btn" download>دابەزاندنی ZIP</a>
+            <a href="${font.zip}" class="download-btn" download>دابه‌زاندنی فۆنت</a>
         `;
         grid.appendChild(card);
     });
