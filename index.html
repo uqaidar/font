@@ -61,16 +61,18 @@ i, .fa, .fas, .fab, .far, .fa-brands, [class*="fa-"] {
 .header h1 {
     margin: 0px 0;
     font-size: 1.8rem;
-    color: white; /* ڕەنگی تایتڵەکە دەبێتە سپی */
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.3); /* سێبەرێکی سووک بۆ ئەوەی لەسەر ڕەنگە کاڵەکە دیار بێت */
+    color: white; 
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
     transition: font-family 0.6s ease;
-    /* چاککردنی کێشەی جوڵان لێرەیە */
     height: 50px; 
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-}  
+
+    /* --- زیادکراو بۆ ناسککردنەوەی فۆنتەکە --- */
+    font-weight: normal !important; /* ئەمە وادەکات بۆڵد نەمێنێت */
+}
 
       /* ئایکۆنەکانی سۆشیاڵ میدیا */
         .social-links {
@@ -691,6 +693,13 @@ i, .fa, .fas, .fab, .far, .fa-brands, [class*="fa-"] {
 @font-face { font-family: 'uniqaidar_xal_01'; src: url('fonts/xal/uniqaidar_xal_01.ttf'); }
 @font-face { font-family: 'uniqaidar_xal_02'; src: url('fonts/xal/uniqaidar_xal_02.ttf'); }
 
+@font-face { font-family: 'uniqaidar_fastlink01'; src: url('fonts/fastlink/uniqaidar_fastlink01.ttf'); }
+@font-face { font-family: 'uniqaidar_fastlink02'; src: url('fonts/fastlink/uniqaidar_fastlink02.ttf'); }
+@font-face { font-family: 'uniqaidar_fastlink03'; src: url('fonts/fastlink/uniqaidar_fastlink03.ttf'); }
+@font-face { font-family: 'uniqaidar_fastlink04'; src: url('fonts/fastlink/uniqaidar_fastlink04.ttf'); }
+
+
+
 footer {
     text-align: center;
     padding: 4px 10px;
@@ -844,6 +853,140 @@ footer strong {
     to { transform: translateY(0); opacity: 1; }
 }
 
+
+/* ستایڵی گشتی بۆ دوگمەکانی هێدەر */
+.header-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    text-decoration: none; /* بۆ ئەوەی هێڵی ژێر ڕەبەتەکە نەمێنێت */
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.header-btn:hover {
+    background: #27ae60; /* ڕەنگی سەوز کاتێک ماوس دەچێتە سەری */
+    border-color: #27ae60;
+    transform: translateY(-2px);
+}
+
+/* دڵنیابوونەوە لەوەی دوگمەکان لە تەنیشت یەکترن */
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.close-download {
+    color: #aaa;
+    float: left; /* چونکە سایتەکە RTLە، دەچێتە لای چەپ */
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-download:hover {
+    color: #e74c3c;
+}
+
+.download-box {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+    /* ١. ڕێگری لە کەوتنی توخمەکان بەسەر یەکدا لە هێدەر */
+    .header-content {
+        display: flex;
+        flex-direction: column; /* هەموو شتێک دەخاتە ژێر یەک نەک تەنیشت یەک */
+        align-items: center;
+        text-align: center;
+        height: auto !important; /* ڕێگە دەدات بەپێی پێویست درێژ ببێت */
+        padding: 20px 10px;
+    }
+
+    /* ٢. چاککردنی تایتڵەکە */
+    .header h1 {
+        position: static !important; /* ئەگەر پۆزیشنەکەی تێکچوو بێت */
+        margin: 10px 0 !important;
+        font-size: 1.3rem !important;
+        line-height: 1.4;
+    }
+
+    /* ٣. چاککردنی لۆگۆ یان وێنەی هێدەر */
+    .header img, .logo {
+        max-width: 80px; /* قەبارەی لۆگۆکە بچووک بکەرەوە */
+        margin-bottom: 10px;
+    }
+
+    /* ٤. سێرچەکە جیا بکەرەوە تا نەکەوێتە سەر لۆگۆ */
+    .search-container {
+        width: 90% !important;
+        position: static !important;
+        margin: 15px auto !important;
+    }
+
+    /* ٥. سوشیال میدیا و دوگمەکانی تر */
+    .social-links, .header-actions {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+        position: static !important;
+    }
+}
+    /* ٢. ڕیزکردنی دوگمەکانی هێدەر (زانیاری و داگرتن) بە ستوونی */
+    .header-actions {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .header-btn {
+        width: 80%; /* دوگمەکان کەمێک پانتر دەبن بۆ ئەوەی ئاسانتر کلیکیان لێ بکرێت */
+        justify-content: center;
+    }
+
+    /* ٣. ڕێکخستنی دوگمەکانی فلتەر (ئەوانەی کە پێم دایت) */
+    .filter-group {
+        gap: 8px;
+        padding: 5px;
+    }
+
+    .filter-btn {
+        font-size: 0.75rem !important; /* بچووککردنەوەی نووسینی دوگمەکان */
+        padding: 0 12px !important;
+        height: 30px !important;
+    }
+
+    /* ٤. کەمکردنەوەی مەودای خانەکان لە مۆبایلدا بۆ ئەوەی شوێن بەفیڕۆ نەچێت */
+    .fonts-grid {
+        grid-template-columns: 1fr; /* تەنها یەک خانە لەسەر یەک نیشان بدە */
+        gap: 15px;
+        padding: 10px;
+    }
+    
+    .font-card {
+        margin: 0 5px; /* کەمێک دووری لە لێوارەکانی شاشە */
+    }
+}
+
     </style>
 </head>
 <body>
@@ -859,6 +1002,26 @@ footer strong {
 <a href="#" id="aboutBtn" class="social-icon">
     <i class="fas fa-info-circle"></i>
 </a>
+
+
+<button id="downloadModalBtn" class="header-btn">
+    <i class="fas fa-download"></i> داگرتنی فۆنتەکان
+</button>
+
+<div id="downloadModal" class="modal">
+    <div class="modal-content">
+        <span class="close-download">&times;</span>
+        <h2>داگرتنی فۆنتەکان</h2>
+        <div class="download-box" style="text-align: center; padding: 12px 25px !important;">
+            <i class="fas fa-file-archive" style="font-size: 50px; color: #f1c40f; margin-bottom: 15px;"></i>
+            <p style="font-size: 1.2rem; margin-bottom: 20px;">فەرموو لەگەڵ داگرتنی 420 فۆنتی یونی قەیدار بە شێوەی زیپ (ZIP)</p>
+            
+            <a href="kak qaidar" target="_blank" class="header-btn" style="background: #27ae60; padding: 12px 30px; font-size: 1.0rem;">
+                <i class="fas fa-cloud-download-alt"></i> كلیك بكه‌ بۆ داگرتنی فۆنته‌كان 
+            </a>
+        </div>
+    </div>
+</div>
     </div>
 
     <div class="header-logo">
@@ -888,9 +1051,12 @@ footer strong {
             <button class="filter-btn" onclick="filterFonts('semic', this)">سەمیک</button>
             <button class="filter-btn" onclick="filterFonts('jrnus', this)">ژێرنووس</button>
             <button class="filter-btn" onclick="filterFonts('media', this)">میدیا</button>
+            <button class="filter-btn" onclick="filterFonts('fastlink', this)">فاست لینك</button>
+
         </div>
     </div>
 </div>
+
 <div class="font-grid" id="font-grid"></div>
 <script>
     /* --- لێرە لیستی JavaScript ناو final_code.txt دابنێ --- */
@@ -1332,6 +1498,14 @@ const fonts = [
     { name: "uniqaidar_xal_00", file: "uniqaidar_xal_00", path: "fonts/xal/uniqaidar_xal_00.ttf", zip: "fonts/xal/uniqaidar_xal_00.zip", category: "xal" },
     { name: "uniqaidar_xal_01", file: "uniqaidar_xal_01", path: "fonts/xal/uniqaidar_xal_01.ttf", zip: "fonts/xal/uniqaidar_xal_01.zip", category: "xal" },
     { name: "uniqaidar_xal_02", file: "uniqaidar_xal_02", path: "fonts/xal/uniqaidar_xal_02.ttf", zip: "fonts/xal/uniqaidar_xal_02.zip", category: "xal" },
+
+
+    { name: "uniqaidar_fastlink01", file: "uniqaidar_fastlink01", path: "fonts/fastlink/uniqaidar_fastlink01.ttf", zip: "fonts/fastlink/uniqaidar_fastlink01.zip", category: "fastlink" },
+    { name: "uniqaidar_fastlink02", file: "uniqaidar_fastlink02", path: "fonts/fastlink/uniqaidar_fastlink02.ttf", zip: "fonts/fastlink/uniqaidar_fastlink02.zip", category: "fastlink" },
+    { name: "uniqaidar_fastlink03", file: "uniqaidar_fastlink03", path: "fonts/fastlink/uniqaidar_fastlink03.ttf", zip: "fonts/fastlink/uniqaidar_fastlink03.zip", category: "fastlink" },
+    { name: "uniqaidar_fastlink04", file: "uniqaidar_fastlink04", path: "fonts/fastlink/uniqaidar_fastlink04.ttf", zip: "fonts/fastlink/uniqaidar_fastlink04.zip", category: "fastlink" },
+
+
 ];
 
 
@@ -1466,6 +1640,26 @@ input.addEventListener('input', (e) => {
     // ڕاستەوخۆ دووبارە فۆنتەکان پیشان دەداتەوە بە نووسینە نوێیەکە
     renderFonts(text, filtered);
 });
+
+// کۆدی کردنەوەی پەنجەرەی داگرتن
+var downloadModal = document.getElementById("downloadModal");
+var downloadBtn = document.getElementById("downloadModalBtn");
+var closeDownload = document.getElementsByClassName("close-download")[0];
+
+downloadBtn.onclick = function() {
+    downloadModal.style.display = "block";
+}
+
+closeDownload.onclick = function() {
+    downloadModal.style.display = "none";
+}
+
+// کاتێک لە دەرەوەی پەنجەرەکە کلیک کرا دابخرێت
+window.onclick = function(event) {
+    if (event.target == downloadModal) {
+        downloadModal.style.display = "none";
+    }
+}
 
 </script>
 
